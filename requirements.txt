@@ -1,0 +1,24 @@
+# Core geospatial
+numpy
+pandas
+geopandas
+shapely
+pyogrio
+rasterio
+scipy
+
+# Google Earth Engine
+earthengine-api
+geemap
+# Used in the Siddipet / Thoothukudi / Osmanabad notebooks (GEES2Downloader)
+geeS2downloader
+
+# Modelling & plotting
+scikit-learn
+matplotlib
+seaborn
+openpyxl        # reading .xlsx CCE files with pandas
+
+# Dev
+jupyter
+nbstripout

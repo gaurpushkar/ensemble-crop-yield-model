@@ -1,0 +1,52 @@
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+
+# Data & model outputs (keep large/raw geodata out of git)
+data/
+outputs/
+*.tif
+*.tiff
+*.TIF
+*.img
+*.nc
+*.hdf
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+*.qmd
+*.gpkg
+*.geojson
+*.kml
+*.zip
+*.tar
+*.tar.gz
+*.csv
+*.xlsx
+*.xls
+*.pkl
+*.joblib
+
+# Earth Engine / credentials
+*credentials*
+*service-account*.json
+.config/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
