@@ -19,6 +19,18 @@ using Sentinel-1/2 imagery, MODIS, and ERA5-Land weather from Google Earth Engin
 | Osmanabad | Maharashtra | Bengal gram | Rabi 2022-23 |
 | Nuh | Haryana | Paddy (Rice) | 2023 |
 
+## Documentation
+
+| Doc | Contents |
+|---|---|
+| [docs/methodology.md](docs/methodology.md) | Growth stages, vegetation indices, APAR, the SPM model, Random Forest, accuracy metrics, limitations |
+| [docs/notebooks.md](docs/notebooks.md) | Run order and what each notebook reads and writes |
+| [docs/parameters.md](docs/parameters.md) | Settings per district: dates, crop-mask assets, RUE/HI, features, filter thresholds |
+| [docs/data.md](docs/data.md) | Earth Engine datasets, required local inputs, directory layout, raster conventions |
+| [docs/known-issues.md](docs/known-issues.md) | Bugs and caveats found during review, with suggested fixes |
+
+Each notebook also starts with a header cell giving its purpose, inputs, outputs and position in the pipeline.
+
 ## Workflow
 
 ```
@@ -76,6 +88,7 @@ Expected layout per district (as used in the notebooks):
 
 ```
 .
+├── docs/                    # methodology, notebook reference, parameters, data, known issues
 ├── notebooks/
 │   ├── 01_data_download/
 │   ├── 02_raster_formation/
@@ -87,3 +100,10 @@ Expected layout per district (as used in the notebooks):
 ├── .pre-commit-config.yaml
 └── .gitignore
 ```
+
+## Status and caveats
+
+This is research code. It is committed as it was used to produce the Rabi 2022-23 and Kharif 2023
+yield maps. Accuracy figures produced by the notebooks are **in-sample** and computed **after outlier
+filtering**, so treat them as optimistic. See [docs/known-issues.md](docs/known-issues.md) before
+reusing the results or the code.
